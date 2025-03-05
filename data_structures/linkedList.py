@@ -1,6 +1,6 @@
-import node
+import Node
 
-class linkedList:
+class LinkedList:
     # Constructor
     def __init__(self):
         self.head = None
@@ -15,12 +15,12 @@ class linkedList:
     # Adds new node to list
     def add(self, val):
         if self.head is None:
-            self.head = node(val)
+            self.head = Node(val)
         else:
             curr = self.head
             while curr.next is not None:
                 curr = curr.next
-            curr.next = node(val)
+            curr.next = Node(val)
 
     # Removes node from list
     def remove(self, val):
