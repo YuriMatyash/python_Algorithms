@@ -2,8 +2,11 @@ from node import Node
 
 class LinkedList:
     # Constructor
-    def __init__(self):
-        self.head = None
+    def __init__(self, val=None):
+        if val is None:
+            self.head = None
+        else:
+            self.head = Node(val)
 
     # Iterator
     def __iter__(self):
