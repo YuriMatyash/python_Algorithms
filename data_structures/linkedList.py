@@ -42,6 +42,20 @@ class LinkedList:
         if curr is not None:
             prev.next = curr.next
 
+    # Returns True if node exsists, else false
+    def is_node(self, val):
+        if self.head == None:
+            return False
+        
+        curr = self.head
+        while (curr is not None):
+            if curr.val == val:
+                return True
+            curr = curr.next
+        
+        return False
+
+
     # Prints list
     def printList(self):
         curr = self.head
