@@ -55,7 +55,7 @@ class Graph:
         if vertex in self.vertices:
             return
         
-        self.vertices[vertex] = LinkedList(vertex)
+        self.vertices[vertex] = LinkedList()
 
     # Adds new edge
     def add_edge(self, edge):
