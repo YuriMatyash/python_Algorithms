@@ -6,7 +6,7 @@ class Graph:
         self.vertices = {}
 
         for vertex in vertices:
-            self.vertices[vertex] = LinkedList(vertex)
+            self.vertices[vertex] = LinkedList()
 
 
         for edge in edges:
@@ -68,6 +68,15 @@ class Graph:
 
         self.vertices[v1].add(v2)
         self.vertices[v2].add(v1)
+    
+    def count_vertex(self):
+        return len(self.vertices)
+    
+    def count_edge(self):
+        count = 0
+        for vertex in self.vertices:
+            count += sum(1 for val in self.vertices[vertex])
+        return (count // 2)
 
     # Prints the graph
     def print_graph(self):
