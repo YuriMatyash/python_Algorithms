@@ -1,6 +1,7 @@
 from linkedList import LinkedList
 
 class Graph:
+    # Constructor
     def __init__(self, vertices, edges):
         self.vertices = {}
 
@@ -49,13 +50,14 @@ class Graph:
         
         del self.vertices[vertex]
     
-
+    # Adds new vertex
     def add_vertex(self, vertex):
         if vertex in self.vertices:
             return
         
         self.vertices[vertex] = LinkedList(vertex)
 
+    # Adds new edge
     def add_edge(self, edge):
         if self.is_edge(edge):
             return
@@ -67,8 +69,9 @@ class Graph:
         self.vertices[v1].add(v2)
         self.vertices[v2].add(v1)
 
+    # Prints the graph
     def print_graph(self):
-        for vertex, linked_list in self.vertices:
+        for vertex, linked_list in self.vertices.items():
             print(f'{vertex} -> ', end='')
             linked_list.printList()
             
