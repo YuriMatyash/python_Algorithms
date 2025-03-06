@@ -1,4 +1,4 @@
-from linkedList import LinkedList
+from data_structures.linkedList import LinkedList
 
 class Queue():
     def __init__(self):
@@ -20,7 +20,7 @@ class Queue():
             return None
 
         head = self.list.head.val
-        self.list.remove(head)
+        self.list.head = self.list.head.next
         self.size -= 1
         return head
     

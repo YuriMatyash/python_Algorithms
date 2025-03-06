@@ -1,5 +1,5 @@
-from linkedList import LinkedList
-from node import Node
+from data_structures.linkedList import LinkedList
+from data_structures.node import Node
 
 class Stack():
     def __init__(self):
