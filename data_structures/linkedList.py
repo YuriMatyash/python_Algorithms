@@ -64,5 +64,3 @@ class LinkedList:
             print(curr.val, end=" --> ")
             curr = curr.next
         print('None')
-
-    

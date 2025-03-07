@@ -36,6 +36,3 @@ class Queue():
     def print_queue(self):
         print('Queue front: ',end='')
         self.list.printList()
-
-
-    

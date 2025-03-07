@@ -6,8 +6,10 @@ class Color(Enum):
 class Node:
     def __init__(self, val):
         self.val = val
-        self.color = Color.WHITE # Used for BFS 0-White, 1-Gray, 2-Black
         self.next = None
+        self.color = Color.WHITE    # Used for BFS 0-White, 1-Gray, 2-Black
+        self.pi = None              # Used for BFS, represents parent
+        self.d = -1                 # Used for BFS, represents distance from starting vertex
     
     def toWhite(self):
         self.color = Color.WHITE
@@ -26,5 +28,3 @@ class Node:
     
     def isBlack(self):
         return self.color == Color.BLACK
-
-    

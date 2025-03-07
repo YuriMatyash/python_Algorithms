@@ -83,17 +83,3 @@ class Graph:
         for vertex, linked_list in self.vertices.items():
             print(f'{vertex} -> ', end='')
             linked_list.printList()
-            
-
-        
-        
-
-
-
-
-
-        
-
-        
-
-
